@@ -11,6 +11,7 @@ public class Spock extends Element {
     }
     @Override
     public Outcome compareTo(Element e){
-        return null;
+        Outcome o = new Outcome(this, e);
+        return o;
     }
 }
