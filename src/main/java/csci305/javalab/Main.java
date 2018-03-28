@@ -9,7 +9,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
         Map<Integer, Element> moves = new HashMap<>();
         Lizard lizard = new Lizard("Lizard");
         Paper paper = new Paper("Paper");
@@ -23,7 +23,10 @@ public class Main {
         moves.put(4, lizard);
         moves.put(5, spock);
 
-
-
+        Player p1 = new StupidBot("StupidBot", moves);
+        Player p2 = new RandomBot("RandomBot", moves);
+        Element p1move = p1.play();
+        Element p2move = p2.play();
+        System.out.println(p1move.compareTo(p2move));
     }
 }
