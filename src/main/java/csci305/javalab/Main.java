@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Map moves = new HashMap();
+        Map<Integer, Element> moves = new HashMap<>();
         Lizard lizard = new Lizard("Lizard");
         Paper paper = new Paper("Paper");
         Rock rock = new Rock("Rock");
@@ -23,8 +23,6 @@ public class Main {
         moves.put(4, scissors);
         moves.put(5, spock);
 
-        System.out.println(rock.compareTo(paper));
-        System.out.println(paper.compareTo(rock));
-        System.out.println(rock.compareTo(rock));
+
     }
 }
