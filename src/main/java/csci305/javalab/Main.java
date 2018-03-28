@@ -17,11 +17,12 @@ public class Main {
         Scissors scissors = new Scissors("Scissors");
         Spock spock = new Spock("Spock");
 
-        moves.put(1, lizard);
+        moves.put(1, rock);
         moves.put(2, paper);
-        moves.put(3, rock);
-        moves.put(4, scissors);
+        moves.put(3, scissors);
+        moves.put(4, lizard);
         moves.put(5, spock);
+
 
 
     }

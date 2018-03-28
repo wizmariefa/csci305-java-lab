@@ -9,7 +9,7 @@ public class RandomBot extends Player {
     public String name;
     private Map<Integer, Element> moves;
 
-    public RandomBot(String name, Map moves){
+    public RandomBot(String name, Map<Integer, Element> moves){
         super(name);
         this.moves = moves;
     }

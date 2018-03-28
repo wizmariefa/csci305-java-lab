@@ -5,25 +5,26 @@ import java.util.*;
  * The Iterative bot cycles through each of the moves.
  ******************************************************/
 
-public class IterativeBot extends Player {
+public class LastPlayBot extends Player {
     public String name;
     private Map<Integer, Element> moves;
-    private int i;
+    private Element move;
 
-    public IterativeBot(String name, Map<Integer, Element> moves) {
+    public LastPlayBot(String name, Map<Integer, Element> moves) {
         super(name);
         this.moves = moves;
-        i = 1;
+        move = moves.get(1);
     }
 
     public String getName() {
         return name;
     }
 
+    public void setNextMove(Element e){
+        this.move = e;
+    }
     @Override
     public Element play() {
-        Element move = moves.get(i);
-        i++;
-        return move;
+        return(move);
     }
 }
