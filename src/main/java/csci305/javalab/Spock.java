@@ -10,8 +10,8 @@ public class Spock extends Element {
         super(name);
     }
     @Override
-    public Outcome compareTo(Element e){
+    public String compareTo(Element e){
         Outcome o = new Outcome(this, e);
-        return o;
+        return o.getOutcome() + " -- " + o.getType();
     }
 }

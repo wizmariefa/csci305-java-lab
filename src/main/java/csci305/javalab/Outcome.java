@@ -15,7 +15,16 @@ public class Outcome {
         determine(first, second);
     }
 
-    public void determine(Element first, Element second) {
+
+    public String getOutcome(){
+        return outcome;
+    }
+
+    public String getType(){
+        return type;
+    }
+
+    private void determine(Element first, Element second) {
         if (first.getName() == second.getName()) {
             outcome = first.getName() + " equals " + second.getName();
             type = "Tie";
