@@ -6,6 +6,7 @@ package csci305.javalab;
 
 public abstract class Element {
     public String name;
+    public Outcome o;
 
     public Element(String name){
         this.name = name;
@@ -13,6 +14,10 @@ public abstract class Element {
 
     public String getName(){
         return name;
+    }
+
+    public Outcome getOutcome(){
+        return o;
     }
 
     public abstract String compareTo(Element e);

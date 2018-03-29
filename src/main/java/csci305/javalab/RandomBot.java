@@ -6,19 +6,15 @@ import java.util.*;
  ******************************************************/
 
 public class RandomBot extends Player {
-    public String name;
-    private Map<Integer, Element> moves;
 
     public RandomBot(String name, Map<Integer, Element> moves){
-        super(name);
-        this.moves = moves;
+        super(name, moves);
     }
 
-    public String getName(){
-        return name;
-    }
     @Override
     public Element play(){
-        return moves.get((Math.random() * 5)+1);
+        Random ran = new Random();
+        int x = ran.nextInt(5) + 1;
+        return moves.get(x);
     }
 }

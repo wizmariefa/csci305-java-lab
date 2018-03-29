@@ -9,9 +9,14 @@ public class Scissors extends Element {
     public Scissors(String name){
         super(name);
     }
+
+    public String getName(){
+        return this.name;
+    }
+
     @Override
     public String compareTo(Element e){
-        Outcome o = new Outcome(this, e);
-        return o.getOutcome() + " -- " + o.getType();
+        o = new Outcome(this, e);
+        return o.getOutcome();
     }
 }

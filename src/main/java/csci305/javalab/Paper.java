@@ -10,8 +10,13 @@ public class Paper extends Element {
         super(name);
     }
     @Override
+
+    public String getName(){
+        return this.name;
+    }
+
     public String compareTo(Element e){
-        Outcome o = new Outcome(this, e);
-        return o.getOutcome() + " -- " + o.getType();
+        o = new Outcome(this, e);
+        return o.getOutcome();
     }
 }

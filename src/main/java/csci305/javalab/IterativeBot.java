@@ -6,18 +6,11 @@ import java.util.*;
  ******************************************************/
 
 public class IterativeBot extends Player {
-    public String name;
-    private Map<Integer, Element> moves;
     private int i;
 
     public IterativeBot(String name, Map<Integer, Element> moves) {
-        super(name);
-        this.moves = moves;
+        super(name, moves);
         i = 1;
-    }
-
-    public String getName() {
-        return name;
     }
 
     @Override

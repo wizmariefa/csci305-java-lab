@@ -5,13 +5,18 @@ package csci305.javalab;
  ******************************************************/
 
 public class Rock extends Element {
-    private String name;
+
     public Rock(String name){
-        this.name = name;
+        super(name);
     }
+
+    public String getName(){
+        return this.name;
+    }
+
     @Override
     public String compareTo(Element e){
-        Outcome o = new Outcome(this, e);
-        return o.getOutcome() + " -- " + o.getType();
+        o = new Outcome(this, e);
+        return o.getOutcome();
     }
 }

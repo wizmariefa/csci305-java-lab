@@ -8,24 +8,21 @@ import java.util.*;
  ******************************************************/
 
 public class Human extends Player {
-    public String name;
-    private Map<Integer, Element> moves;
     private Element move;
     Scanner sc = new Scanner(System.in);
-    boolean goodMove = false;
 
     public Human(String name, Map<Integer, Element> moves){
-        super(name);
-        this.moves = moves;
+        super(name, moves);
     }
 
     public Element play(){
-        int choice = -1;
+        int choice;
         printMenu();
-        while (goodMove = false) {
+        do {
             System.out.println("Enter your move: ");
             choice = getMove();
-        }
+            if (choice > 5 || choice < 1) { System.out.println("Invalid move. Please try again."); }
+        } while(choice > 5 || choice < 1);
 
         move = moves.get(choice);
 
@@ -41,11 +38,7 @@ public class Human extends Player {
     }
 
     private int getMove(){
-        String s = sc.next();
-        int i = -1;
-        try {i = Integer.parseInt(s);}
-        catch (NumberFormatException n){n.printStackTrace();}
-        if (i >= 1 && i <= 5) { goodMove = true; }
+        int i = sc.nextInt();
         return i;
     }
 }
