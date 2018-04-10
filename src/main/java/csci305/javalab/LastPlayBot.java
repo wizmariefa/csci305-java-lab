@@ -1,4 +1,5 @@
 package csci305.javalab;
+
 import java.util.*;
 
 /******************************************************
@@ -13,12 +14,16 @@ public class LastPlayBot extends Player {
         move = moves.get(1);
     }
 
-    public void setNextMove(Element e){
+    /******************************************************
+     * Sets player's next move, based on what the other
+     * player passes in from the last round.
+     ******************************************************/
+    public void setNextMove(Element e) {
         this.move = e;
     }
 
     @Override
     public Element play() {
-        return(move);
+        return (move);
     }
 }

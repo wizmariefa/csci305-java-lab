@@ -1,4 +1,5 @@
 package csci305.javalab;
+
 import java.util.*;
 
 /******************************************************
@@ -7,12 +8,12 @@ import java.util.*;
 
 public class RandomBot extends Player {
 
-    public RandomBot(String name, Map<Integer, Element> moves){
+    public RandomBot(String name, Map<Integer, Element> moves) {
         super(name, moves);
     }
 
     @Override
-    public Element play(){
+    public Element play() {
         Random ran = new Random();
         int x = ran.nextInt(5) + 1;
         return moves.get(x);

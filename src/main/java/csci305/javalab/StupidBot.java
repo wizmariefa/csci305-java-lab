@@ -1,4 +1,5 @@
 package csci305.javalab;
+
 import java.util.*;
 
 /******************************************************
@@ -7,12 +8,12 @@ import java.util.*;
 
 public class StupidBot extends Player {
 
-    public StupidBot(String name, Map<Integer, Element> moves){
+    public StupidBot(String name, Map<Integer, Element> moves) {
         super(name, moves);
     }
 
     @Override
-    public Element play(){
+    public Element play() {
         return moves.get(1);
     }
 }

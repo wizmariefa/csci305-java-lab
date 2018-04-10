@@ -15,12 +15,18 @@ public class Outcome {
         determine(first, second);
     }
 
-
-    public String getOutcome(){
+    /******************************************************
+     * This method returns the outcome of the game, the
+     * String "x beats x."
+     ******************************************************/
+    public String getOutcome() {
         return outcome;
     }
 
-    public String getType(){
+    /******************************************************
+     * These method returns either Win, Lose, or Tie.
+     ******************************************************/
+    public String getType() {
         return type;
     }
 

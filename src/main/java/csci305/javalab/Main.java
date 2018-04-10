@@ -22,6 +22,10 @@ public class Main {
                 "     (6) MyBot\n");
     }
 
+    /******************************************************
+     * This class gets the user's input of chosen games and
+     * returns the players that they choose.
+     ******************************************************/
     public static Player getChoice(int n, Map<Integer, Element> m) {
         Player player = null;
         int choice;
@@ -57,6 +61,10 @@ public class Main {
         return player;
     }
 
+    /******************************************************
+     * This method determines which player won the round and
+     * adds it to that player's number of wins.
+     ******************************************************/
     public static void printOutcome(Element e) {
         String out = e.getOutcome().getType();
 
@@ -69,10 +77,14 @@ public class Main {
         } else if (out == "Tie") {
             System.out.println("\tRound was a tie.\n");
         } else {
-            System.out.println("If we here you fucked up Marie");
+            System.out.println("Oh no! We have a bug!");
         }
     }
 
+    /******************************************************
+     * Prints out the statistics at the end of the five
+     * rounds.
+     ******************************************************/
     public static void endRounds() {
         System.out.println("The score is " + p1wins + " to " + p2wins + ". ");
         if (p1wins > p2wins) {
@@ -84,8 +96,10 @@ public class Main {
         }
     }
 
+    /******************************************************
+     * Main method, runs the game.
+     ******************************************************/
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         Map<Integer, Element> moves = new HashMap<>();
         Lizard lizard = new Lizard("Lizard");
         Paper paper = new Paper("Paper");
@@ -119,7 +133,7 @@ public class Main {
 
             printOutcome(p1move);
             if (p2.getName() == "Last Play Bot") {
-                    p2.setNextMove(p1move);
+                p2.setNextMove(p1move);
             } else if (p2.getName() == "Last Play Bot") {
                 p2.setNextMove(p2move);
             }

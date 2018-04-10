@@ -1,0 +1,43 @@
+Marie Morin
+Java Lab Questions
+CSCI 304
+----------
+1. I implemented the LastPlayBot by creating a method where I pass in the other player's previous move.
+
+2. For MyBot, I have the Bot sort the hand and then play the hand in Alphabetical Order. I did this by adding the names
+   to an ArrayList, and for each turn, if the value (the name) of the sorted arraylist index at the number of that turn
+   (1, 2, 3, 4, or 5) was equal to one of the element names in the hand, then we returned that element. It makes them
+   play in alphabetical order.
+
+3. Java is a statically typed language, meaning that its variables have definitive types and will throw an error if
+   they are assigned a value associated with an incompatible type. In regards to binding time, Java binds variables
+   with the 'static' specifier at language implementation time. It binds global variables (apart from static/final
+   variables) at compile time. Local variables, however, are stack-dynamic variables and are bound at execution time.
+   Java Objects (aka user-defined types, aka classes) are bound through explicit heap-dynamic storage binding.
+   https://www.safaribooksonline.com/library/view/java-in-a/9781449371296/ch04.html
+   https://goo.gl/fMUkiF (had to shorten this URL because it was suuuuuper long)
+
+4. I find it pretty easy to beat the StupidBot, and can actually beat it for every round of every game! Along the same
+   predictable lines, Iterative Bot and My Bot were both also really easy to beat, since I knew in what order they'd be
+   playing their hand. Last Play Bot was easy to beat since it was playing what I had just played, and made it pretty
+   simple to know what to play to beat that one as well.
+
+5. After reading both Wikipedia pages, I would say none other than the Random Bot have a better chance of winning.
+   However, I think if you're playing a large amount of games (say 20+) you could record the moves for the other player
+   and figure out which of the moves they play the most often and are most likely to play, and play the moves that would
+   beat what is expected from them. However, that would require some machine learning algorithm most likely and seems
+   like far too much effort for a game like RPSLS. The random bot gives equal probability to every play, and every play
+   has an equal probability for winning. Therefore, the Random Bot is the 'perfect' bot in my eyes.
+
+6. I like that I am familiar with Java. I understand (at least, at a decent level) the quirks and tricks associated
+   with Java and feel so much more comfortable writing this program than most of the others from the semester.
+
+7. I feel that Java is very wordy, and has an "archaic" feel to the way you have to write everything out in such long
+   form compared to some other (cough python cough) languages that are popular today.
+
+8. Yes! I had fun because I felt comfortable with this langauge and understood what I was doing and how I had to do it.
+
+9. Probably around 3-5 hours total, including comments/making my code prettier.
+
+10. A lot, including all my undergraduate classes and most of my fun little personal projects.
+
